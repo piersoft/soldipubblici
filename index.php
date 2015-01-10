@@ -13,7 +13,7 @@ $url = 'http://soldipubblici.gov.it/it/ricerca';
 //open connection
 $ch = curl_init();
 
-$file = fopen('spese.json', 'w+');
+//$file = fopen('spese.json', 'w+'); //da decommentare se si vuole il file locale
 header("Pragma: public");
 header("Expires: 0");
 header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
@@ -30,16 +30,13 @@ header("Content-Transfer-Encoding: binary ");
 curl_setopt($ch,CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded; charset=UTF-8','Accept: Application/json','X-Requested-With: XMLHttpRequest','Content-Type: application/octet-stream','Content-Type: application/download','Content-Type: application/force-download','Content-Transfer-Encoding: binary '));
 curl_setopt($ch,CURLOPT_POSTFIELDS, 'codicecomparto=PRO&codiceente=011135934&chi=Comune+di+Matera&cosa=');
+// la riga successiva salva in locale il file spese.json
 //curl_setopt($ch, CURLOPT_FILE, $file);
-//echo curl_exec($ch);
 
-//execute post
-//$result = curl_exec($ch);
 curl_exec($ch);
-//close connection
 
 curl_close($ch);
 
-fclose($file);
+//fclose($file);
 
 ?>
