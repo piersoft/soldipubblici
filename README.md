@@ -7,4 +7,4 @@ codicecomparto=PRO&codiceente=011135934&chi=Comune+di+Matera&cosa=
 
 è il Comune di Matera con cosa= lasciato appositamente non popolato per estrarre tutte le voci
 
-Licenza CC-BY-SA 
+Licenza CC-BY sui contenuti e AGPL sul codice 
